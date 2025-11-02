@@ -1,0 +1,20 @@
+/* style.css - custom overrides and small utilities */
+@import url("design-system.css"); /* optional if you prefer import order, CSS files already linked in HTML */
+
+/* helper */
+.lead{margin-bottom:var(--space-3);}
+.header-grid .brand h1{margin:0;color:white;font-size:1.25rem}
+.hero-actions{display:flex; gap:var(--space-2); margin-top:var(--space-3)}
+.cards .card h4{margin:0 0 6px 0}
+.form-grid{grid-template-columns:repeat(12,1fr)}
+.form-group.col-6{grid-column:span 6}
+.form-group.col-12{grid-column:span 12}
+.form-group input[type="text"], .form-group input[type="email"], .form-group textarea{width:100%}
+
+/* small screens form columns */
+@media (max-width:767px){
+  .form-group.col-6{grid-column:span 12}
+}
+
+/* focus visible improvements */
+:focus:not(:focus-visible){outline:none}

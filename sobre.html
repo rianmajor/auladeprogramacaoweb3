@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voluntariado — Sobre</title>
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- header reutilizado -->
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <div class="brand">
+        <a href="index.html" aria-label="Voltar para a página inicial"><h1>Voluntariado</h1></a>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <button id="btn-hamburger-2" class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="menu-principal-2" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false">Sobre</button>
+            <ul class="submenu">
+              <li><a href="#missao">Nossa Missão</a></li>
+              <li><a href="#valores">Valores</a></li>
+            </ul>
+          </li>
+          <li><a href="projetos.html">Projetos <span class="badge">4</span></a></li>
+          <li><a href="contato.html" class="btn btn-primary small">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <article class="grid-12 about">
+      <header class="col-12">
+        <h2 id="missao">Nossa missão</h2>
+        <p class="lead">Promover ações voluntárias que gerem impacto social, educacional e ambiental.</p>
+      </header>
+
+      <section id="valores" class="col-8">
+        <h3>Valores</h3>
+        <ul>
+          <li>Solidariedade</li>
+          <li>Transparência</li>
+          <li>Inclusão</li>
+          <li>Sustentabilidade</li>
+        </ul>
+      </section>
+
+      <aside class="col-4">
+        <h4>Como participar</h4>
+        <p>Inscreva-se em nossos projetos ou entre em contato para ações pontuais.</p>
+        <a href="contato.html" class="btn btn-outline">Quero participar</a>
+      </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>Desenvolvido por <strong>Rian Major</strong> — Programação Web 3</p>
+      <nav aria-label="Rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

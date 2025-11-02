@@ -1,0 +1,97 @@
+/* layout.css */
+
+/* Grid system: simple 12-column using CSS Grid */
+.grid-12{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:var(--space-3);
+  align-items:start;
+}
+
+/* column helpers: col-1 .. col-12 */
+[class*="col-"]{
+  /* default full width for safety */
+}
+.col-1{grid-column: span 1;}
+.col-2{grid-column: span 2;}
+.col-3{grid-column: span 3;}
+.col-4{grid-column: span 4;}
+.col-5{grid-column: span 5;}
+.col-6{grid-column: span 6;}
+.col-7{grid-column: span 7;}
+.col-8{grid-column: span 8;}
+.col-9{grid-column: span 9;}
+.col-10{grid-column: span 10;}
+.col-11{grid-column: span 11;}
+.col-12{grid-column: span 12;}
+
+/* header layout */
+.header-grid{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:center;
+  gap:var(--space-3);
+  padding:var(--space-2) 0;
+}
+
+/* footer layout */
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:var(--space-2) 0;
+}
+
+/* hero */
+.hero{
+  display:grid;
+  gap:var(--space-4);
+  margin:var(--space-4) 0;
+}
+.hero-text h2{margin-bottom:var(--space-2)}
+.hero-media img{width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+
+/* responsive breakpoints */
+/* mobile-first; breakpoints: 320, 480, 768, 1024, 1440 (matching requirement) */
+@media (max-width:479px){
+  .grid-12{grid-template-columns:repeat(4, 1fr)}
+  .col-7{grid-column: span 4;}
+  .col-5{grid-column: span 4;}
+  .col-4{grid-column: span 4;}
+  .col-6{grid-column: span 4;}
+  .hero{grid-template-columns: 1fr}
+}
+
+@media (min-width:480px) and (max-width:767px){
+  .grid-12{grid-template-columns:repeat(8,1fr)}
+  .col-7{grid-column: span 5;}
+  .col-5{grid-column: span 3;}
+  .col-4{grid-column: span 4;}
+  .col-6{grid-column: span 4;}
+  .hero{grid-template-columns: 1fr}
+}
+
+@media (min-width:768px) and (max-width:1023px){
+  .grid-12{grid-template-columns:repeat(12,1fr)}
+  .col-7{grid-column: span 7;}
+  .col-5{grid-column: span 5;}
+  .col-4{grid-column: span 4;}
+  .col-6{grid-column: span 6;}
+  .hero{grid-template-columns: 7fr 5fr}
+}
+
+@media (min-width:1024px) and (max-width:1439px){
+  .grid-12{grid-template-columns:repeat(12,1fr)}
+  .hero{grid-template-columns: 7fr 5fr}
+}
+
+@media (min-width:1440px){
+  .grid-12{grid-template-columns:repeat(12,1fr)}
+  .container{max-width:1400px}
+  .hero{grid-template-columns: 7fr 5fr}
+}
+
+/* utility spacing */
+.cards-section{margin-bottom:var(--space-5)}
+.cards{gap:var(--space-3)}
+.cards .card{min-height:180px}

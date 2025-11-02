@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voluntariado — Home</title>
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <div class="brand">
+        <a href="index.html" aria-label="Voltar para a página inicial">
+          <h1>Voluntariado</h1>
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Principal">
+        <button id="btn-hamburger" class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <ul id="menu-principal" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-expanded="false">Sobre</button>
+            <ul class="submenu" aria-label="submenu sobre">
+              <li><a href="sobre.html">Nossa Missão</a></li>
+              <li><a href="sobre.html#valores">Valores</a></li>
+            </ul>
+          </li>
+          <li><a href="projetos.html">Projetos <span class="badge">4</span></a></li>
+          <li><a href="contato.html" class="btn btn-primary small">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero grid-12">
+      <div class="hero-text col-7">
+        <h2>Transformando comunidades — uma ação de cada vez</h2>
+        <p class="lead">Participe de projetos que promovem educação, sustentabilidade e apoio social. Seja agente da mudança.</p>
+        <div class="hero-actions">
+          <a href="projetos.html" class="btn btn-primary">Ver projetos</a>
+          <a href="contato.html" class="btn btn-outline">Entrar em contato</a>
+        </div>
+      </div>
+      <div class="hero-media col-5">
+        <img src="assets/img/voluntariado1.jpg" alt="Voluntários reunidos em ação comunitária" />
+      </div>
+    </section>
+
+    <section aria-labelledby="cards-title" class="container cards-section">
+      <h3 id="cards-title">Principais áreas</h3>
+      <div class="cards grid-12">
+        <article class="card col-4" tabindex="0">
+          <h4>Doação de alimentos</h4>
+          <p>Campanhas regulares para apoio a famílias em situação de insegurança alimentar.</p>
+          <div class="card-footer">
+            <span class="tag">Alimentação</span>
+            <a href="projetos.html" class="btn small">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card col-4" tabindex="0">
+          <h4>Apoio educacional</h4>
+          <p>Aulas de reforço e oficinas para jovens da comunidade.</p>
+          <div class="card-footer">
+            <span class="tag">Educação</span>
+            <a href="projetos.html" class="btn small">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card col-4" tabindex="0">
+          <h4>Sustentabilidade</h4>
+          <p>Projetos de reciclagem, hortas comunitárias e conscientização ambiental.</p>
+          <div class="card-footer">
+            <span class="tag">Meio Ambiente</span>
+            <a href="projetos.html" class="btn small">Saiba mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>Desenvolvido por <strong>Rian Major</strong> — Programação Web 3</p>
+      <nav aria-label="Rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fechar modal">&times;</button>
+      <h3 id="modal-title">Obrigado!</h3>
+      <p id="modal-message">Sua mensagem foi enviada com sucesso.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

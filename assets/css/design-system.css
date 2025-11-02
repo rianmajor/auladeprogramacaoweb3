@@ -1,0 +1,80 @@
+/* design-system.css */
+/* Paleta de cores (8 cores: primárias, secundárias, neutras) */
+:root{
+  /* cores primárias */
+  --color-primary: #0A6847;
+  --color-primary-700: #08543a;
+  --color-primary-200: #e6f4ef;
+
+  /* cores secundárias */
+  --color-secondary: #F2A154;
+  --color-secondary-700: #d7863a;
+
+  /* neutras */
+  --color-dark: #0b0b0b;
+  --color-muted: #6b6b6b;
+  --color-light: #f8f8f8;
+
+  /* semantic */
+  --success: #2e8b57;
+  --danger: #c0392b;
+  --info: #2d9cdb;
+
+  /* tipografia */
+  --ff-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --fs-1: 2rem;  /* display */
+  --fs-2: 1.5rem; /* h2 */
+  --fs-3: 1.25rem; /* h3 */
+  --fs-4: 1rem; /* body */
+  --fs-5: 0.875rem; /* small */
+
+  /* espaçamento modular */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* grid */
+  --container-max: 1200px;
+  --gutter: 16px;
+
+  /* sombras */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.12);
+  --radius: 8px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--ff-base);
+  font-size:16px;
+  color:var(--color-dark);
+  background:var(--color-light);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* utility */
+.container{
+  width:calc(100% - var(--gutter));
+  max-width:var(--container-max);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:var(--gutter);
+  padding-right:var(--gutter);
+}
+
+/* text */
+h1{font-size:var(--fs-1); margin:0}
+h2{font-size:var(--fs-2); margin:0 0 var(--space-2) 0}
+h3{font-size:var(--fs-3);}
+.lead{font-size:var(--fs-4); color:var(--color-muted)}
+
+/* accessible visible focus */
+:focus{outline:3px solid var(--color-primary-200); outline-offset:3px}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:var(--space-2);top:var(--space-2);background:white;padding:8px;border-radius:4px;z-index:9999}

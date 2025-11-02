@@ -1,0 +1,122 @@
+/* components.css */
+
+/* NAV */
+.nav { position:relative; }
+.menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:var(--space-2);
+  align-items:center;
+}
+.menu a, .menu button{ color:white; background:transparent; border:none; text-decoration:none; font-weight:600; padding:8px; cursor:pointer;}
+.menu .badge{background:var(--color-secondary); color:white; padding:2px 6px; border-radius:12px; font-size:var(--fs-5); margin-left:6px}
+
+/* hamburger for mobile */
+.hamburger{display:none; background:transparent; border:none; padding:8px; cursor:pointer}
+.hamburger .bar{display:block;width:22px;height:2px;background:white;margin:4px 0;border-radius:2px}
+
+/* submenu */
+.has-submenu{position:relative}
+.submenu{
+  position:absolute;
+  left:0;
+  top:calc(100% + 6px);
+  background:white;
+  color:var(--color-dark);
+  border-radius:6px;
+  min-width:180px;
+  padding:8px 0;
+  box-shadow:var(--shadow-md);
+  display:none;
+}
+.submenu li{list-style:none}
+.submenu a{display:block;padding:8px 16px;color:var(--color-dark)}
+.has-submenu .submenu-toggle{color:white}
+.has-submenu[aria-expanded="true"] .submenu{display:block}
+
+/* header background */
+.site-header{background:var(--color-primary); color:white; position:sticky; top:0; z-index:999}
+.site-header a{color:inherit}
+
+/* Buttons */
+.btn{
+  border-radius:6px;
+  padding:10px 16px;
+  border:2px solid transparent;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-block;
+  text-decoration:none;
+  text-align:center;
+}
+.btn.small{padding:6px 10px; font-size:var(--fs-5)}
+.btn-primary{background:var(--color-primary); color:white; border-color:var(--color-primary-700)}
+.btn-outline{background:transparent; border-color:var(--color-primary); color:var(--color-primary)}
+.btn:focus{box-shadow:0 0 0 4px rgba(10,104,71,0.15)}
+.btn:disabled, .btn[disabled]{opacity:0.5; cursor:not-allowed}
+
+/* hover/active states */
+.btn:hover:not(:disabled){transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+
+/* Cards */
+.card{
+  background:white;
+  padding:var(--space-3);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+  gap:var(--space-2);
+}
+.card img{width:100%;border-radius:6px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+
+/* tags and badges */
+.tag{background:var(--color-primary-200); color:var(--color-primary-700); padding:6px 10px; border-radius:16px; font-size:var(--fs-5)}
+.badge{background:var(--color-secondary); color:white; padding:4px 8px; border-radius:999px; font-size:0.8rem}
+
+/* Form */
+.form-grid{display:grid; gap:var(--space-3)}
+.form-group{display:flex;flex-direction:column}
+.form-group label{font-weight:600;margin-bottom:8px}
+.form-group input, .form-group textarea{
+  padding:12px;border-radius:6px;border:1px solid #ddd;font-size:var(--fs-4)
+}
+.form-group input:focus, .form-group textarea:focus{border-color:var(--color-primary); box-shadow:0 4px 12px rgba(10,104,71,0.06)}
+.error{color:var(--danger); font-size:0.875rem; min-height:18px; margin-top:6px}
+
+/* form layout columns using .col-6 etc (already defined in layout) */
+.form-actions{display:flex; gap:var(--space-2); align-items:center}
+
+/* toast */
+.toast{
+  position:fixed;
+  right:var(--space-2);
+  bottom:var(--space-2);
+  background:var(--color-dark);
+  color:white;
+  padding:var(--space-2);
+  border-radius:6px;
+  box-shadow:var(--shadow-md);
+  z-index:2000;
+}
+
+/* modal */
+.modal{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4); z-index:2000; opacity:0; pointer-events:none; transition:opacity .2s ease}
+.modal[aria-hidden="false"]{opacity:1; pointer-events:auto}
+.modal-content{background:white; padding:var(--space-3); max-width:520px; border-radius:8px; box-shadow:var(--shadow-md); position:relative}
+.modal-close{position:absolute; right:10px; top:6px; background:none; border:none; font-size:1.25rem; cursor:pointer}
+
+/* footer */
+.site-footer{background:#0b0b0b;color:white;padding:var(--space-3); margin-top:var(--space-4)}
+.footer-links{list-style:none; display:flex; gap:var(--space-2); padding:0; margin:0}
+
+/* small screens adjustments */
+@media (max-width:767px){
+  .menu{display:none; position:fixed; right:0; top:0; background:var(--color-primary-700); height:100vh; width:260px; flex-direction:column; padding:var(--space-4); gap:var(--space-3)}
+  .menu.open{display:flex}
+  .hamburger{display:inline-block}
+}
